@@ -126,3 +126,4 @@ public class Tasks {
         return (int) totalHours;
     }
 }
+//----------------------------END OF FILE----------------------------------------------//
