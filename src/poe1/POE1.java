@@ -5,6 +5,8 @@
  */
 package Poe1;
 
+import poe1.Tasks;
+
 /**
  *
  * @author LeoAddinall_ST10441154_ST10441154@vcconnect.edu.za
@@ -23,6 +25,8 @@ public class POE1 {
         
         // Initiate user login
         Login.LoginUser();
+        
+        Tasks.Option();
 
     }
 

@@ -81,7 +81,7 @@ public class UserInput {
         return PassWord != null && PassWord.length() >= 8
                 && PassWord.matches(".*[A-Z].*")
                 && // At least one uppercase letter
-                PassWord.matches(".[*\\d].*")
+                PassWord.matches(".*\\d.*")
                 && // At least one digit
                 PassWord.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?].*"); // At least one special character
     }
