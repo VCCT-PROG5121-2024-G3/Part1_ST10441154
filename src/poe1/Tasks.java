@@ -43,13 +43,15 @@ public class Tasks {
             }
         }
     }
-
+//----------------------------------------------------------------------------------------------------
     // Validates if the task description is within the allowed length.
+
     public static boolean checkTaskDcription(String taskDescript) {
         return taskDescript != null && taskDescript.length() <= 50;
     }
-
+//----------------------------------------------------------------------------------------------------
     // Handles the task creation process, including gathering task details from the user and storing them.
+
     public static void task() {
         // Retrieve user information stored in UserInput class
         UserInfo storedUserInfo = UserInput.userInfo;
@@ -97,21 +99,23 @@ public class Tasks {
             taskInfo.setTaskStatus(status);
 
             // Display the captured task details to the user
-            JOptionPane.showMessageDialog(null, "Task Status: " + taskInfo.getTaskStatus() + "\nDeveloper Details: " + taskInfo.getDeveloperDetails() + "\nTask Number: " + currentTaskNumber + "\nTask Name: " + taskInfo.getTaskName() + "\nTask Description:  " + taskInfo.getTaskDescription()  +  "\nTask ID: " + taskInfo.getTaskID() + "\nDuration: " + taskInfo.getTaskDuration() + "hrs");
+            JOptionPane.showMessageDialog(null, "Task Status: " + taskInfo.getTaskStatus() + "\nDeveloper Details: " + taskInfo.getDeveloperDetails() + "\nTask Number: " + currentTaskNumber + "\nTask Name: " + taskInfo.getTaskName() + "\nTask Description:  " + taskInfo.getTaskDescription() + "\nTask ID: " + taskInfo.getTaskID() + "\nDuration: " + taskInfo.getTaskDuration() + "hrs");
         }
 
         // Display the total hours across all tasks
         JOptionPane.showMessageDialog(null, "Total Hours Across All Tasks: " + totalHours);
     }
-
+//----------------------------------------------------------------------------------------------------
     // Generates a unique task ID based on the task name, task number, and developer details.
+
     public static String createTaskID() {
         String firstTwoLetters = taskInfo.getTaskName().substring(0, Math.min(taskInfo.getTaskName().length(), 2)).toUpperCase();
         String lastThreeLetters = taskInfo.getDeveloperDetails().substring(Math.max(0, taskInfo.getDeveloperDetails().length() - 3)).toUpperCase();
         return firstTwoLetters + ":" + currentTaskNumber + ":" + lastThreeLetters;
     }
-
+//----------------------------------------------------------------------------------------------------
     // Method to reset total hours
+
     public static void resetTotalHours() {
         totalHours = 0;
     }
